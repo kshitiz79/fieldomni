@@ -5,38 +5,38 @@ import React from "react";
 const features = [
   {
     icon: "fa-solid fa-shield-halved",
-    bgColor: "#EFF6FF",
-    iconColor: "#3B82F6",
+    bgColor: "#d5f7f1",
+    iconColor: "#1ec4b6",
     title: "Independent Solutions",
     description: "Each module is powerful on its own and built to deliver complete field automation.",
   },
   {
     icon: "fa-solid fa-layer-group",
-    bgColor: "#ECFDF5",
-    iconColor: "#10B981",
+    bgColor: "#d5f7f1",
+    iconColor: "#00384f",
     title: "Flexible & Scalable",
     description: "Start with what you need and scale as your field medical team grows.",
   },
   {
     icon: "fa-solid fa-lock",
-    bgColor: "#F5F3FF",
-    iconColor: "#8B5CF6",
+    bgColor: "#e8f7fa",
+    iconColor: "#7aaac3",
     title: "Secure by Design",
     description: "Enterprise-grade security to keep doctor, clinic, and prescription audit data safe.",
   },
   {
     icon: "fa-solid fa-arrow-trend-up",
-    bgColor: "#FFF7ED",
-    iconColor: "#F97316",
+    bgColor: "#d5f7f1",
+    iconColor: "#1ec4b6",
     title: "Insight Driven",
     description: "Make smarter decisions with real-time DCR insights and doctor call analytics.",
   },
   {
     icon: "fa-solid fa-headset",
-    bgColor: "#F0FDFA",
-    iconColor: "#06B6D4",
+    bgColor: "#e8f7fa",
+    iconColor: "#00384f",
     title: "Reliable Support",
-    description: "Our dedicated pharma domain experts are always here to support your success.",
+    description: "Our dedicated pharma domain experts in India are always here to support your success.",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function WhyChooseSection() {
           <span
             className="d-inline-block text-uppercase fw-bold mb-2"
             style={{
-              color: "#007BFF",
+              color: "#1ec4b6",
               fontSize: "13px",
               letterSpacing: "1.8px",
             }}
@@ -60,7 +60,7 @@ export default function WhyChooseSection() {
             className="fw-bold"
             style={{
               fontSize: "clamp(1.8rem, 3.5vw, 2.75rem)",
-              color: "#15171A",
+              color: "#00384f",
               letterSpacing: "-0.5px",
             }}
           >

@@ -80,33 +80,38 @@ export default function Header() {
 
                 {/* Features Dropdown */}
                 <li className="nav-item">
-                  <Link className="nav-link" href="#features">
+                  <Link className="nav-link" href="/features">
                     Features <i className="fas fa-chevron-down"></i>
                   </Link>
                   <ul className="sub-menu list-unstyled">
                     <li>
-                      <Link href="#mr-tracking">
-                        <i className="fa-solid fa-location-dot me-2 text-primary"></i> MR Live GPS Tracking
+                      <Link href="/features#tracking">
+                        <i className="fa-solid fa-location-dot me-2" style={{ color: "#1ec4b6" }}></i> MR Live GPS Tracking
                       </Link>
                     </li>
                     <li>
-                      <Link href="#attendance">
-                        <i className="fa-solid fa-user-check me-2 text-primary"></i> Geo-fenced Attendance
+                      <Link href="/features#attendance">
+                        <i className="fa-solid fa-user-check me-2" style={{ color: "#1ec4b6" }}></i> Geo-fenced Attendance
                       </Link>
                     </li>
                     <li>
-                      <Link href="#dcr">
-                        <i className="fa-solid fa-clipboard-list me-2 text-primary"></i> Daily Call Reports (DCR)
+                      <Link href="/features#dcr">
+                        <i className="fa-solid fa-clipboard-list me-2" style={{ color: "#1ec4b6" }}></i> Daily Call Reports (DCR)
                       </Link>
                     </li>
                     <li>
-                      <Link href="#sales">
-                        <i className="fa-solid fa-cart-shopping me-2 text-primary"></i> Chemist Sales Orders
+                      <Link href="/features#orders">
+                        <i className="fa-solid fa-cart-shopping me-2" style={{ color: "#1ec4b6" }}></i> Chemist Sales Orders
                       </Link>
                     </li>
                     <li>
-                      <Link href="#payroll">
-                        <i className="fa-solid fa-calculator me-2 text-primary"></i> Payroll &amp; TA/DA Claims
+                      <Link href="/features#payroll">
+                        <i className="fa-solid fa-calculator me-2" style={{ color: "#1ec4b6" }}></i> Payroll &amp; TA/DA Claims
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/features#doctor-crm">
+                        <i className="fa-solid fa-user-doctor me-2" style={{ color: "#1ec4b6" }}></i> Doctor Master CRM
                       </Link>
                     </li>
                   </ul>
@@ -114,21 +119,29 @@ export default function Header() {
 
                 {/* Solutions Dropdown */}
                 <li className="nav-item">
-                  <Link className="nav-link" href="#solutions">
+                  <Link className="nav-link" href="/solutions">
                     Solutions <i className="fas fa-chevron-down"></i>
                   </Link>
                   <ul className="sub-menu list-unstyled">
                     <li>
-                      <Link href="#pharma-companies">Pharma Enterprises</Link>
+                      <Link href="/solutions#pharma-enterprises">
+                        <i className="fa-solid fa-pills me-2" style={{ color: "#1ec4b6" }}></i> Pharma Enterprises
+                      </Link>
                     </li>
                     <li>
-                      <Link href="#biotech">Biotech &amp; Generics</Link>
+                      <Link href="/solutions#biotech">
+                        <i className="fa-solid fa-dna me-2" style={{ color: "#1ec4b6" }}></i> Biotech &amp; Generics
+                      </Link>
                     </li>
                     <li>
-                      <Link href="#otc-distribution">OTC &amp; Chemist Networks</Link>
+                      <Link href="/solutions#otc-chemist">
+                        <i className="fa-solid fa-store me-2" style={{ color: "#1ec4b6" }}></i> OTC &amp; Chemist Networks
+                      </Link>
                     </li>
                     <li>
-                      <Link href="#managers">Area &amp; Regional Managers</Link>
+                      <Link href="/solutions#managers">
+                        <i className="fa-solid fa-user-tie me-2" style={{ color: "#1ec4b6" }}></i> Area &amp; Regional Managers
+                      </Link>
                     </li>
                   </ul>
                 </li>
@@ -147,6 +160,13 @@ export default function Header() {
                   </Link>
                 </li>
 
+                {/* Blog */}
+                <li className="nav-item">
+                  <Link className="nav-link" href="/blog">
+                    Blog
+                  </Link>
+                </li>
+
                 {/* Contact */}
                 <li className="nav-item">
                   <Link className="nav-link" href="/contact-us">
@@ -157,17 +177,18 @@ export default function Header() {
 
               {/* Header Right Action Button */}
               <div className="menu-right-info">
-                <Link className="theme-btn-main style-2" href="/contact-us">
+                <Link className="theme-btn-main style-2" href="/login">
                   <span className="theme-btn-arrow-left">
                     <i className="fa-solid fa-arrow-up-right"></i>
                   </span>
-                  <span className="theme-btn">Book Demo</span>
+                  <span className="theme-btn">Sign In</span>
                   <span className="theme-btn-arrow-right">
                     <i className="fa-solid fa-arrow-up-right"></i>
                   </span>
                 </Link>
               </div>
             </div>
+
           </nav>
         </div>
 
@@ -262,28 +283,33 @@ export default function Header() {
                     {activeSubMenu === "features" && (
                       <ul className="list-unstyled ps-3 mt-2">
                         <li>
-                          <Link className="text-white-50 text-decoration-none d-block py-1" href="#mr-tracking" onClick={() => setIsMobileMenuOpen(false)}>
+                          <Link className="text-white-50 text-decoration-none d-block py-1" href="/features#tracking" onClick={() => setIsMobileMenuOpen(false)}>
                             MR Live GPS Tracking
                           </Link>
                         </li>
                         <li>
-                          <Link className="text-white-50 text-decoration-none d-block py-1" href="#attendance" onClick={() => setIsMobileMenuOpen(false)}>
+                          <Link className="text-white-50 text-decoration-none d-block py-1" href="/features#attendance" onClick={() => setIsMobileMenuOpen(false)}>
                             Geo-fenced Attendance
                           </Link>
                         </li>
                         <li>
-                          <Link className="text-white-50 text-decoration-none d-block py-1" href="#dcr" onClick={() => setIsMobileMenuOpen(false)}>
+                          <Link className="text-white-50 text-decoration-none d-block py-1" href="/features#dcr" onClick={() => setIsMobileMenuOpen(false)}>
                             Daily Call Reports (DCR)
                           </Link>
                         </li>
                         <li>
-                          <Link className="text-white-50 text-decoration-none d-block py-1" href="#sales" onClick={() => setIsMobileMenuOpen(false)}>
+                          <Link className="text-white-50 text-decoration-none d-block py-1" href="/features#orders" onClick={() => setIsMobileMenuOpen(false)}>
                             Chemist Sales Orders
                           </Link>
                         </li>
                         <li>
-                          <Link className="text-white-50 text-decoration-none d-block py-1" href="#payroll" onClick={() => setIsMobileMenuOpen(false)}>
+                          <Link className="text-white-50 text-decoration-none d-block py-1" href="/features#payroll" onClick={() => setIsMobileMenuOpen(false)}>
                             Payroll &amp; TA/DA Claims
+                          </Link>
+                        </li>
+                        <li>
+                          <Link className="text-white-50 text-decoration-none d-block py-1" href="/features#doctor-crm" onClick={() => setIsMobileMenuOpen(false)}>
+                            Doctor Master CRM
                           </Link>
                         </li>
                       </ul>
@@ -305,18 +331,23 @@ export default function Header() {
                     {activeSubMenu === "solutions" && (
                       <ul className="list-unstyled ps-3 mt-2">
                         <li>
-                          <Link className="text-white-50 text-decoration-none d-block py-1" href="#pharma-companies" onClick={() => setIsMobileMenuOpen(false)}>
+                          <Link className="text-white-50 text-decoration-none d-block py-1" href="/solutions#pharma-enterprises" onClick={() => setIsMobileMenuOpen(false)}>
                             Pharma Enterprises
                           </Link>
                         </li>
                         <li>
-                          <Link className="text-white-50 text-decoration-none d-block py-1" href="#biotech" onClick={() => setIsMobileMenuOpen(false)}>
+                          <Link className="text-white-50 text-decoration-none d-block py-1" href="/solutions#biotech" onClick={() => setIsMobileMenuOpen(false)}>
                             Biotech &amp; Generics
                           </Link>
                         </li>
                         <li>
-                          <Link className="text-white-50 text-decoration-none d-block py-1" href="#otc-distribution" onClick={() => setIsMobileMenuOpen(false)}>
+                          <Link className="text-white-50 text-decoration-none d-block py-1" href="/solutions#otc-chemist" onClick={() => setIsMobileMenuOpen(false)}>
                             OTC &amp; Chemist Networks
+                          </Link>
+                        </li>
+                        <li>
+                          <Link className="text-white-50 text-decoration-none d-block py-1" href="/solutions#managers" onClick={() => setIsMobileMenuOpen(false)}>
+                            Area &amp; Regional Managers
                           </Link>
                         </li>
                       </ul>
@@ -336,8 +367,20 @@ export default function Header() {
                   </li>
 
                   <li className="mb-2">
+                    <Link className="d-block text-white text-decoration-none py-2" href="/blog" onClick={() => setIsMobileMenuOpen(false)}>
+                      Blog
+                    </Link>
+                  </li>
+
+                  <li className="mb-2">
                     <Link className="d-block text-white text-decoration-none py-2" href="/contact-us" onClick={() => setIsMobileMenuOpen(false)}>
                       Contact
+                    </Link>
+                  </li>
+
+                  <li className="mb-2 pt-2 border-top border-secondary">
+                    <Link className="d-block text-white text-decoration-none py-2 fw-bold" href="/login" onClick={() => setIsMobileMenuOpen(false)} style={{ color: "#1ec4b6" }}>
+                      <i className="fa-solid fa-arrow-right-to-bracket me-2"></i> Sign In to Portal
                     </Link>
                   </li>
                 </ul>

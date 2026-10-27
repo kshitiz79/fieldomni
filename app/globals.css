@@ -133,35 +133,54 @@ body {
 }
 
 /* ===================================================
-   FAST & SMOOTH DROPDOWNS (Composite Only)
+   FAST & SMOOTH DROPDOWNS (Rock Solid & Easy to Hover)
    =================================================== */
+
+.header-main .navbar .navbar-nav .nav-item {
+  position: relative;
+  padding-bottom: 8px;
+  margin-bottom: -8px;
+}
 
 .header-main .navbar .navbar-nav .nav-item > .sub-menu {
   position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 250px;
+  top: calc(100% - 2px);
+  left: -10px;
+  min-width: 270px;
   background: #ffffff;
-  box-shadow: 0 12px 28px rgba(0, 56, 79, 0.1), 0 4px 10px rgba(0, 56, 79, 0.05);
-  border: 1px solid rgba(0, 56, 79, 0.08);
-  border-radius: 12px;
-  padding: 8px 0;
+  box-shadow: 0 16px 36px rgba(0, 56, 79, 0.12), 0 4px 12px rgba(0, 56, 79, 0.06);
+  border: 1px solid rgba(0, 56, 79, 0.09);
+  border-radius: 14px;
+  padding: 8px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translate3d(0, 6px, 0);
+  transform: translate3d(0, 8px, 0);
   will-change: opacity, transform;
-  transition: opacity 0.18s ease,
-              transform 0.18s cubic-bezier(0.16, 1, 0.3, 1),
-              visibility 0.18s;
-  z-index: 1000;
+  transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.22s;
+  z-index: 1050;
 }
 
-.header-main .navbar .navbar-nav .nav-item:hover > .sub-menu {
+/* Invisible Bridge to prevent mouse leaving container during travel */
+.header-main .navbar .navbar-nav .nav-item > .sub-menu::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 16px;
+  display: block;
+}
+
+.header-main .navbar .navbar-nav .nav-item:hover > .sub-menu,
+.header-main .navbar .navbar-nav .nav-item:focus-within > .sub-menu {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
   transform: translate3d(0, 0, 0);
+  transition-delay: 0s;
 }
 
 .header-main .navbar .navbar-nav .nav-item > .sub-menu li {
@@ -171,17 +190,19 @@ body {
 .header-main .navbar .navbar-nav .nav-item > .sub-menu li a {
   display: flex;
   align-items: center;
-  padding: 9px 20px;
+  padding: 10px 16px;
   color: #00384f;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
-  transition: background-color 0.12s ease, color 0.12s ease;
+  border-radius: 8px;
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
 }
 
 .header-main .navbar .navbar-nav .nav-item > .sub-menu li a:hover {
   color: #1ec4b6;
   background-color: #d5f7f1;
+  transform: translateX(4px);
 }
 
 /* ===================================================

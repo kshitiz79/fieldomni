@@ -18,11 +18,10 @@ export default function DoctorNetworkSection() {
         {/* Section Header */}
         <div className="gt-section-title style-3 text-center mb-4">
           <span
-            className="d-inline-block px-3 py-1 rounded-pill mb-2"
+            className="d-inline-block px-3 py-1 rounded-pill mb-2 fw-semibold"
             style={{
-              backgroundColor: "rgba(0, 123, 255, 0.1)",
-              color: "#007BFF",
-              fontWeight: 600,
+              backgroundColor: "#d5f7f1",
+              color: "#1ec4b6",
               fontSize: "13px",
               letterSpacing: "1px",
               textTransform: "uppercase",
@@ -31,10 +30,11 @@ export default function DoctorNetworkSection() {
             Doctor &amp; Chemist CRM
           </span>
           <h2
-            className="fw-bold text-dark"
+            className="fw-bold"
             style={{
               fontSize: "clamp(2rem, 3.5vw, 2.75rem)",
               letterSpacing: "-0.5px",
+              color: "#00384f",
             }}
           >
             Build Powerful Healthcare Relationships

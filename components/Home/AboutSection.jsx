@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <section className="gt-about-section fix section-padding pt-0 bg-white">
+    <section className="gt-about-section fix section-padding pt-0 bg-white" id="about">
       <div className="container">
         <div className="gt-about-wrapper-3 section-padding pb-0">
           {/* Decorative Clip Shape */}
@@ -19,11 +19,10 @@ export default function AboutSection() {
               <div className="gt-about-content">
                 <div className="gt-section-title mb-0">
                   <span
-                    className="tt-capitalize d-inline-block px-3 py-1 rounded-pill mb-3"
+                    className="tt-capitalize d-inline-block px-3 py-1 rounded-pill mb-3 fw-semibold"
                     style={{
-                      backgroundColor: "rgba(0, 123, 255, 0.08)",
-                      color: "#007BFF",
-                      fontWeight: 600,
+                      backgroundColor: "#d5f7f1",
+                      color: "#1ec4b6",
                       fontSize: "14px",
                     }}
                   >
@@ -34,7 +33,7 @@ export default function AboutSection() {
                     style={{
                       fontSize: "clamp(2rem, 3.5vw, 2.75rem)",
                       lineHeight: 1.2,
-                      color: "#15171A",
+                      color: "#00384f",
                       letterSpacing: "-0.5px",
                     }}
                   >
@@ -52,9 +51,9 @@ export default function AboutSection() {
                 {/* Feature Bullet List with vertical timeline line */}
                 <ul className="gt-list-items list-unstyled">
                   <li>
-                    <span className="gt-circle-box"></span>
+                    <span className="gt-circle-box" style={{ borderColor: "#1ec4b6" }}></span>
                     <div className="gt-content">
-                      <h3 style={{ fontSize: "19px", fontWeight: 700, color: "#15171A", marginBottom: "6px" }}>
+                      <h3 style={{ fontSize: "19px", fontWeight: 700, color: "#00384f", marginBottom: "6px" }}>
                         All-in-One Field Automation
                       </h3>
                       <span style={{ fontSize: "14.5px", color: "#686866", lineHeight: "1.6" }}>
@@ -65,9 +64,9 @@ export default function AboutSection() {
                   </li>
 
                   <li>
-                    <span className="gt-circle-box"></span>
+                    <span className="gt-circle-box" style={{ borderColor: "#1ec4b6" }}></span>
                     <div className="gt-content">
-                      <h3 style={{ fontSize: "19px", fontWeight: 700, color: "#15171A", marginBottom: "6px" }}>
+                      <h3 style={{ fontSize: "19px", fontWeight: 700, color: "#00384f", marginBottom: "6px" }}>
                         Geo-fenced &amp; Accurate
                       </h3>
                       <span style={{ fontSize: "14.5px", color: "#686866", lineHeight: "1.6" }}>
@@ -78,9 +77,9 @@ export default function AboutSection() {
                   </li>
 
                   <li>
-                    <span className="gt-circle-box"></span>
+                    <span className="gt-circle-box" style={{ borderColor: "#1ec4b6" }}></span>
                     <div className="gt-content">
-                      <h3 style={{ fontSize: "19px", fontWeight: 700, color: "#15171A", marginBottom: "6px" }}>
+                      <h3 style={{ fontSize: "19px", fontWeight: 700, color: "#00384f", marginBottom: "6px" }}>
                         Next-Generation Payroll &amp; Claims
                       </h3>
                       <span style={{ fontSize: "14.5px", color: "#686866", lineHeight: "1.6" }}>

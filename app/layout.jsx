@@ -1,9 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Fieldomni - Pharma MR & Ground Staff Tracking, Payroll & Sales Software",
+  title: "Fieldomni -Ground Staff Tracking, Payroll & Sales Software",
   description:
-    "Comprehensive Pharma Field Force Automation: Real-time MR GPS tracking, doctor visit DCR reports, geo-fenced attendance, chemist order tracking, and automated payroll allowances.",
+    "Comprehensive Pharma Field Force Automation: Real-time GPS tracking,DCR reports, geo-fenced attendance, order tracking, and automated payroll allowances.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

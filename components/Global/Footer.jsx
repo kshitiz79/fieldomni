@@ -28,7 +28,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-widget-wrapper">
           <div className="row justify-content-between">
-            {/* Widget 1: Fieldomni Logo, Description & App Badges */}
+            {/* Widget 1: Fieldomni Logo, Description & Contact Links */}
             <div className="col-xl-3 col-lg-5 col-md-6 wow fadeInUp" data-wow-delay=".2s">
               <div className="footer-widget-items">
                 <div className="widget-head mb-3">
@@ -40,7 +40,7 @@ export default function Footer() {
                         height: "44px",
                         width: "auto",
                         objectFit: "contain",
-                        backgroundColor: "#ffffff",
+
                         padding: "6px 12px",
                         borderRadius: "8px",
                         display: "block",
@@ -53,17 +53,39 @@ export default function Footer() {
                     All-in-one Pharma Ground Staff &amp; MR Tracking Software with live GPS,
                     doctor visit DCR, chemist sales orders, and automated payroll.
                   </p>
-                  <div className="app-image-item">
-                    <div className="app-image">
-                      <a href="#" aria-label="Get Fieldomni on Google Play">
-                        <img src="/assets/img/home-3/google.png" alt="Google Play" />
-                      </a>
-                    </div>
-                    <div className="app-image">
-                      <a href="#" aria-label="Download Fieldomni on App Store">
-                        <img src="/assets/img/home-3/apple.png" alt="Apple Store" />
-                      </a>
-                    </div>
+                  <div className="d-flex flex-column gap-2 mt-3">
+                    <a
+                      href="mailto:support@fieldomni.com"
+                      className="text-white-50 text-decoration-none d-flex align-items-center gap-2"
+                      style={{ transition: "color 0.2s ease" }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = "#1ec4b6")}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
+                    >
+                      <i className="fa-solid fa-envelope" style={{ color: "#1ec4b6" }}></i>
+                      support@fieldomni.com
+                    </a>
+
+                    <a
+                      href="mailto:sales@fieldomni.com"
+                      className="text-white-50 text-decoration-none d-flex align-items-center gap-2"
+                      style={{ transition: "color 0.2s ease" }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = "#1ec4b6")}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
+                    >
+                      <i className="fa-solid fa-headset" style={{ color: "#1ec4b6" }}></i>
+                      sales@fieldomni.com
+                    </a>
+
+                    <a
+                      href="tel:+919204309173"
+                      className="text-white-50 text-decoration-none d-flex align-items-center gap-2"
+                      style={{ transition: "color 0.2s ease" }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = "#1ec4b6")}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
+                    >
+                      <i className="fa-solid fa-phone" style={{ color: "#1ec4b6" }}></i>
+                      +91 92043 09173
+                    </a>
                   </div>
                 </div>
               </div>
@@ -80,19 +102,19 @@ export default function Footer() {
                 </div>
                 <ul className="gt-list-area list-unstyled">
                   <li>
-                    <Link href="#mr-tracking">MR Live Tracking</Link>
+                    <Link href="/features#tracking">MR Live Tracking</Link>
                   </li>
                   <li>
-                    <Link href="#attendance">Geo-fence Attendance</Link>
+                    <Link href="/features#attendance">Geo-fence Attendance</Link>
                   </li>
                   <li>
-                    <Link href="#dcr">Daily Call Report (DCR)</Link>
+                    <Link href="/features#dcr">Daily Call Report (DCR)</Link>
                   </li>
                   <li>
-                    <Link href="#sales">Chemist Orders</Link>
+                    <Link href="/features#orders">Chemist Orders</Link>
                   </li>
                   <li>
-                    <Link href="#payroll">Payroll &amp; TA/DA</Link>
+                    <Link href="/features#payroll">Payroll &amp; TA/DA</Link>
                   </li>
                 </ul>
               </div>
@@ -109,19 +131,22 @@ export default function Footer() {
                 </div>
                 <ul className="gt-list-area list-unstyled">
                   <li>
-                    <Link href="#pharma-companies">Pharma Enterprises</Link>
+                    <Link href="/solutions#pharma-enterprises">Pharma Enterprises</Link>
                   </li>
                   <li>
-                    <Link href="#biotech">Biotech &amp; Generics</Link>
+                    <Link href="/solutions#biotech">Biotech &amp; Generics</Link>
                   </li>
                   <li>
-                    <Link href="#otc-distribution">OTC &amp; Chemist Sales</Link>
+                    <Link href="/solutions#otc-chemist">OTC &amp; Chemist Sales</Link>
                   </li>
                   <li>
-                    <Link href="#managers">Manager Dashboard</Link>
+                    <Link href="/solutions#managers">Manager Dashboard</Link>
                   </li>
                   <li>
                     <Link href="/pricing">Enterprise Pricing</Link>
+                  </li>
+                  <li>
+                    <Link href="/blog">Field Insights &amp; Blog</Link>
                   </li>
                 </ul>
               </div>
@@ -175,11 +200,11 @@ export default function Footer() {
             </p>
             <ul className="footer-list list-unstyled">
               <li>
-                <Link href="/contact-us">Privacy policy</Link>
+                <Link href="/privacy-policy">Privacy policy</Link>
               </li>
               <li>।</li>
               <li>
-                <Link href="/contact-us">Terms &amp; conditions</Link>
+                <Link href="/terms">Terms &amp; conditions</Link>
               </li>
             </ul>
           </div>

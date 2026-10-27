@@ -19,15 +19,15 @@ Version: 1.0.0
 ---------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 :root {
-  --body: #EDF1F5;
+  --body: #F8FCFB;
   --black: #000;
   --white: #fff;
-  --theme: #007BFF;
-  --header: #15171A;
-  --text: #15171ACC;
+  --theme: #1ec4b6;
+  --header: #00384f;
+  --text: #00384fCC;
   --border: #FCFCFC;
-  --bg: #F8FAFC;
-  --box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.13);
+  --bg: #d5f7f1;
+  --box-shadow: 0px 1px 14px 0px rgba(0, 56, 79, 0.13);
   --cube-1: cubic-bezier(0.55, 0.085, 0, 0.99);
   --cube-2: all .25s cubic-bezier(.645,.045,.355,1);
   --cube-3: cubic-bezier(0.25, 1, 0.5, 1);

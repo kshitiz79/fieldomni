@@ -7,6 +7,7 @@ const articles = [
   {
     id: 1,
     title: "How Smart Geofencing Increases MR Doctor Call Coverage by 45%",
+    slug: "how-smart-geofencing-increases-mr-doctor-call-coverage",
     image: "/assets/img/home-4/news/news-01.jpg",
     date: "Aug 14, 2026",
     readTime: "4 min read",
@@ -16,6 +17,7 @@ const articles = [
   {
     id: 2,
     title: "The Ultimate Guide to Eliminating TA/DA Travel Allowance Leakage",
+    slug: "guide-to-eliminating-tada-travel-allowance-leakage",
     image: "/assets/img/home-4/news/news-02.jpg",
     date: "Aug 02, 2026",
     readTime: "6 min read",
@@ -25,6 +27,7 @@ const articles = [
   {
     id: 3,
     title: "Why Top Pharma Brands Move to Real-Time Chemist Secondary Booking",
+    slug: "why-pharma-brands-move-to-real-time-chemist-secondary-booking",
     image: "/assets/img/home-4/news/news-03.jpg",
     date: "Jul 28, 2026",
     readTime: "5 min read",
@@ -34,6 +37,7 @@ const articles = [
   {
     id: 4,
     title: "Interactive E-Detailing: Boosting Doctor Attention & Recall Rates",
+    slug: "interactive-e-detailing-boosting-doctor-attention-and-recall",
     image: "/assets/img/home-4/news/news-04.jpg",
     date: "Jul 15, 2026",
     readTime: "3 min read",
@@ -50,11 +54,10 @@ export default function NewsSection() {
         <div className="d-flex align-items-end justify-content-between flex-wrap gap-3 mb-5">
           <div className="gt-section-title style-3 mb-0">
             <span
-              className="d-inline-block px-3 py-1 rounded-pill mb-2"
+              className="d-inline-block px-3 py-1 rounded-pill mb-2 fw-semibold"
               style={{
-                backgroundColor: "rgba(0, 123, 255, 0.08)",
-                color: "#007BFF",
-                fontWeight: 600,
+                backgroundColor: "#d5f7f1",
+                color: "#1ec4b6",
                 fontSize: "13px",
                 letterSpacing: "1px",
                 textTransform: "uppercase",
@@ -66,7 +69,7 @@ export default function NewsSection() {
               className="fw-bold"
               style={{
                 fontSize: "clamp(2rem, 3.5vw, 2.75rem)",
-                color: "#15171A",
+                color: "#00384f",
                 letterSpacing: "-0.5px",
               }}
             >
@@ -74,11 +77,11 @@ export default function NewsSection() {
             </h2>
           </div>
 
-          <Link className="theme-btn-main style-2" href="/contact-us">
+          <Link className="theme-btn-main style-2" href="/blog">
             <span className="theme-btn-arrow-left">
               <i className="fa-solid fa-arrow-up-right"></i>
             </span>
-            <span className="theme-btn">Subscribe To Newsletter</span>
+            <span className="theme-btn">View All Insights &amp; Blog</span>
             <span className="theme-btn-arrow-right">
               <i className="fa-solid fa-arrow-up-right"></i>
             </span>
@@ -98,17 +101,19 @@ export default function NewsSection() {
               >
                 <div>
                   <div className="gt-thumb position-relative overflow-hidden" style={{ height: "190px" }}>
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-100 h-100 object-fit-cover"
-                      style={{ transition: "transform 0.4s ease" }}
-                      onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-                      onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
-                    />
+                    <Link href={`/blog/${item.slug}`}>
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-100 h-100 object-fit-cover"
+                        style={{ transition: "transform 0.4s ease" }}
+                        onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+                        onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+                      />
+                    </Link>
                     <span
-                      className="position-absolute top-0 start-0 m-3 badge px-3 py-1 bg-dark text-white"
-                      style={{ fontSize: "11px", fontWeight: 600 }}
+                      className="position-absolute top-0 start-0 m-3 badge px-3 py-1"
+                      style={{ fontSize: "11px", fontWeight: 600, backgroundColor: "#00384f", color: "#ffffff" }}
                     >
                       {item.category}
                     </span>
@@ -132,15 +137,15 @@ export default function NewsSection() {
                       style={{
                         fontSize: "16px",
                         lineHeight: "1.4",
-                        color: "#1e293b",
+                        color: "#00384f",
                       }}
                     >
                       <Link
-                        href="/contact-us"
-                        className="text-decoration-none text-dark"
-                        style={{ transition: "color 0.2s ease" }}
-                        onMouseEnter={(e) => (e.currentTarget.style.color = "#007BFF")}
-                        onMouseLeave={(e) => (e.currentTarget.style.color = "#1e293b")}
+                        href={`/blog/${item.slug}`}
+                        className="text-decoration-none"
+                        style={{ color: "#00384f", transition: "color 0.2s ease" }}
+                        onMouseEnter={(e) => (e.currentTarget.style.color = "#1ec4b6")}
+                        onMouseLeave={(e) => (e.currentTarget.style.color = "#00384f")}
                       >
                         {item.title}
                       </Link>
@@ -158,9 +163,9 @@ export default function NewsSection() {
                     {item.author}
                   </span>
                   <Link
-                    href="/contact-us"
-                    className="text-primary text-decoration-none fw-semibold"
-                    style={{ fontSize: "13px" }}
+                    href={`/blog/${item.slug}`}
+                    className="text-decoration-none fw-semibold"
+                    style={{ fontSize: "13px", color: "#1ec4b6" }}
                   >
                     Read <i className="fa-solid fa-arrow-right ms-1"></i>
                   </Link>

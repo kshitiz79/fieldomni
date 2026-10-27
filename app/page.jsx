@@ -24,11 +24,12 @@ export default function Home() {
         <FeatureFocusSection />
         <FeatureBenefitSection />
         <DoctorNetworkSection />
-        {/* <ProductTourSection />
+        <ProductTourSection />
         <WhyChooseAccordionSection />
         <WebAppSection />
+
+        <TestimonialSection />
         <PricingSection />
-        <TestimonialSection /> */}
         <NewsSection />
       </main>
       <Footer />

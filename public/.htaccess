@@ -1,0 +1,42 @@
+# Hostinger Apache Configuration for Next.js Static Export
+# Fixes 404 on page reload / refresh for clean URLs
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. If physical file exists, serve it directly (CSS, JS, images, SVG, etc.)
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # 2. If physical directory exists with index.html, serve it directly
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^ - [L]
+
+  # 3. If URL matches a folder containing index.html (e.g., /pricing or /pricing/ -> /pricing/index.html)
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.*)/?$ $1/index.html [L]
+
+  # 4. If URL matches an .html file (e.g., /pricing -> /pricing.html)
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.*)/?$ $1.html [L]
+
+  # 5. Fallback to 404.html if route not found
+  RewriteCond %{DOCUMENT_ROOT}/404.html -f
+  RewriteRule ^.*$ /404.html [L]
+</IfModule>
+
+# Custom Error Pages
+ErrorDocument 404 /404.html
+
+# Security & Directory Browsing Prevention
+Options -Indexes
+
+# MIME Types & UTF-8
+AddDefaultCharset UTF-8
+AddType text/html .html
+AddType text/css .css
+AddType application/javascript .js
+AddType image/svg+xml .svg
+AddType application/json .json
